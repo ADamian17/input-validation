@@ -6,11 +6,74 @@
 
 body {
   min-height: 100vh;
-  display: flex;
+  display: grid;
   justify-content: center;
-  align-items: center;
+  align-content: center;
+  row-gap: 10px;
 }
 
-.form-input-control {
-  background-color: aqua;
+.input__error-sms.is-active, .input__icon-success.is-active, .input__icon-error.is-active {
+  display: block;
 }
+
+.input__icon-error, .input__icon-success, .input__error-sms {
+  display: none;
+}
+
+.article-email-capture {
+  display: grid;
+  grid-template-columns: 1fr min-content;
+  column-gap: 10px;
+}
+
+.btn {
+  min-width: 100px;
+  height: 38px;
+}
+
+.input {
+  border-radius: 4px;
+  min-height: 38px;
+  min-width: 250px;
+  padding: 5px;
+  grid-column: 1/-1;
+}
+.input, .input__icon-error, .input__icon-success {
+  grid-row: 1/span 1;
+}
+.input__container {
+  display: grid;
+  grid-template-columns: 1fr min-content;
+  grid-auto-rows: min-content;
+  row-gap: 10px;
+}
+.input__icon-success, .input__icon-error {
+  margin-right: 5px;
+  align-self: center;
+  width: 22px;
+  height: 22px;
+  grid-column: 2/-1;
+}
+.input__icon-success {
+  fill: #18bd08;
+}
+.input__icon-error {
+  fill: #da1919;
+}
+.input__error-sms {
+  color: #da1919;
+}
+.input.active--error {
+  border: 1.5px solid #da1919;
+}
+.input.active--error::placeholder {
+  color: #da1919;
+}
+.input.active--success {
+  border: 1.5px solid #18bd08;
+}
+.input.active--success::placeholder {
+  color: #da1919;
+}
+
+/*# sourceMappingURL=main.css.map */

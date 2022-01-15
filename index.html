@@ -8,23 +8,37 @@
   <link rel="stylesheet" href="./styles/main.css">
 
   <script src="./scripts/index.js" defer></script>
-  
+
   <title>Form Vanilla</title>
 </head>
 <body>
-  <div class="form-input-control">
-    <input 
-      id="email__capture" 
-      type="email" 
-      name="email" 
-      placeholder="Email" 
-      required />
-    
-      <svg class="icon__error">
-        <use xlink:href="assets/icons-defs.svg#icon-notice"></use>
-      </svg>
 
-    <p class="input__error">This field is redquired</p>
+  <div class="article-email-capture">
+    <div class="input__container">
+      <input 
+        id="email__capture" 
+        class="input"
+        type="email" 
+        name="email" 
+        placeholder="Email" 
+        required />
+      
+        <svg 
+          id="icon__error"
+          class="input__icon-error">
+          <use xlink:href="assets/icons-defs.svg#icon-notice"></use>
+        </svg>
+  
+        <svg 
+          id="icon__success"
+          class="input__icon-success">
+          <use xlink:href="assets/icons-defs.svg#icon-checkmark"></use>
+        </svg>
+      <p
+        id="message__error"
+        class="input__error-sms">This field is redquired</p>
+    </div>
+    <button class="btn btn-primary">Sign up</button>
   </div>
 </body>
 </html>

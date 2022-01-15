@@ -1,0 +1,108 @@
+$error-red: #da1919;
+$success-green: #18bd08;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  row-gap: 10px;
+}
+
+%error-show {
+  display: block;
+}
+
+%error-hidden {
+  display: none;
+}
+
+.article-email-capture {
+  display: grid;
+  grid-template-columns: 1fr min-content;
+  column-gap: 10px;
+}
+
+.btn {
+  min-width: 100px;
+  height: 38px;
+}
+
+.input{
+  border-radius: 4px;
+  min-height: 38px;
+  min-width: 250px;
+  padding: 5px;
+
+  &,
+  &__icon-error,
+  &__icon-success {
+    grid-row: 1 / span 1;
+  }
+
+  grid-column: 1 / -1;
+
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr min-content;
+    grid-auto-rows: min-content;
+    row-gap: 10px;
+  }
+
+  &__icon-success,
+  &__icon-error {
+    margin-right: 5px;
+    align-self: center;
+    width: 22px;
+    height: 22px;
+    grid-column: 2 / -1;
+
+    &.is-active {
+      @extend %error-show;
+    }
+  }
+
+  &__icon-success {
+    fill: $success-green;
+  }
+
+  &__icon-error {
+    fill: $error-red;
+  }
+
+  &__error-sms {
+    color: $error-red;
+
+    &.is-active {
+      @extend %error-show;
+    }
+  }
+
+  &.active--error {
+    border: 1.5px solid $error-red;
+
+    &::placeholder {
+      color: $error-red;
+    }
+  }
+
+  &.active--success {
+    border: 1.5px solid $success-green;
+
+    &::placeholder {
+      color: $error-red;
+    }
+  }
+
+  &__icon-error,
+  &__icon-success,
+  &__error-sms {
+    @extend %error-hidden;
+  }
+}

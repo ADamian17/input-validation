@@ -4,6 +4,9 @@
   "main": "index.js",
   "author": "Adonis D Martin",
   "license": "MIT",
+  "scripts": {
+    "watch:sass": "sass sass/main.scss styles/main.css -w"
+  },
   "devDependencies": {
     "sass": "^1.48.0"
   }
