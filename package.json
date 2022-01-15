@@ -1,0 +1,10 @@
+{
+  "name": "vanilla_form",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Adonis D Martin",
+  "license": "MIT",
+  "devDependencies": {
+    "sass": "^1.48.0"
+  }
+}
